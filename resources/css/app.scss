@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+
+$primary-color: #40352c;
+$secondary-color: #8c6954;
+$tertiary-color: #8c7b26;
+$light-color: #f2ceae;
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(
+        129deg,
+        rgba(242, 206, 174, 1) 0%,
+        rgba(217, 167, 139, 1) 100%
+    );
+}
+
+@mixin form {
+    .container {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        width: 240px;
+
+        .error {
+            color: $primary-color;
+        }
+
+        h2 {
+            padding-bottom: 1.6rem;
+            text-align: center;
+            color: $primary-color;
+            font-size: 2rem;
+            margin: 0;
+        }
+        .elem {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 1rem;
+            gap: 0.6rem;
+            color: $primary-color;
+            input {
+                border: 1px solid $tertiary-color;
+                padding: 0.4rem;
+                &:focus {
+                    outline: none;
+                    border: 2px solid $tertiary-color;
+                }
+                &[type="submit"] {
+                    margin-top: 0.6rem;
+                    margin: 0 auto;
+                    width: 160px;
+                    padding-block: 0.4rem;
+                    color: $light-color;
+                    font-weight: 700;
+                    border-radius: 6px;
+                    background-color: $tertiary-color;
+                }
+            }
+            .link {
+                color: $tertiary-color;
+            }
+        }
+    }
+}
