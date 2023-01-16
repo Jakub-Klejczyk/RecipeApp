@@ -18,7 +18,7 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('app');
-})->middleware('auth');
+});
 
 Route::get('/logowanie', function () {
     return view('app');
@@ -27,6 +27,10 @@ Route::get('/logowanie', function () {
 Route::get('/rejestracja', function () {
     return view('app');
 })->middleware('guest');
+
+Route::get('/przepisy', function () {
+    return view('app');
+});
 
 #USERS
 

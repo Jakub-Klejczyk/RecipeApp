@@ -5,6 +5,12 @@ $secondary-color: #8c6954;
 $tertiary-color: #8c7b26;
 $light-color: #f2ceae;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     background: linear-gradient(
@@ -12,6 +18,8 @@ body {
         rgba(242, 206, 174, 1) 0%,
         rgba(217, 167, 139, 1) 100%
     );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 @mixin form {
